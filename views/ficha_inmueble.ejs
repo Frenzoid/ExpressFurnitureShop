@@ -1,0 +1,20 @@
+<%- include('cabecera'); %>
+<h1>Ficha del inmueble</h1>
+<ul>
+    <li><strong>Descripcion:</strong> <%=inmueble.descripcion%></li>
+    <li><strong>Tipo:</strong> <%=inmueble.tipo.tipo%></li>
+    <li><strong>Habitaciones:</strong> <%=inmueble.numHabitaciones%></li>
+    <li><strong>Metros cuadrados:</strong> <%=inmueble.m2%></li>
+    <li><strong>Precio:</strong> <%=inmueble.precio%></li>
+</ul>
+<a onclick="edit('<%=inmueble._id%>')" class="btn btn-warning">Editar</a>
+<button onclick="borrar('<%=inmueble._id%>')"  class="white btn btn-danger"> Eliminar </button>
+<hr/>
+<div class="row">
+    <%  imagenes.forEach(imagen  => { %>
+        <div class="gallery_product col-4">
+            <img class="image" src="/public/imgs/inmuebles/<%=inmueble._id%>/<%=imagen%>">
+        </div>
+    <%  }); %>
+</div>
+<%- include('pie'); %>

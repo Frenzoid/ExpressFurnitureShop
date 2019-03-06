@@ -1,0 +1,27 @@
+{
+  "name": "practica_4_inmuebles",
+  "creator": {
+    "author": "Elvi Mihai Sabau"
+  },
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "crypto": "^1.0.1",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-fileupload": "^0.4.0",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^4.13.9",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "rimraf": "^2.6.2"
+  }
+}

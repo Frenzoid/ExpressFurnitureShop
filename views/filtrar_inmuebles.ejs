@@ -1,0 +1,34 @@
+<div class="panel panel-primary">
+    <div class="panel-heading primary">
+        <h4>Filtrar</h4>
+    </div>
+    <div class="panel-body">
+        <form action="/inmuebles/filter" enctype="multipart/form-data"  class="form-inline" method="POST">
+            <nav class="panel-body">
+                <input type="number" min="10000" class="form-control" name="precio" placeholder="precio">
+
+                <input type="number" class="form-control" name="m2" placeholder="superficie">
+
+                <input type="number" class="form-control" name="numHabitaciones" placeholder="numero de habitaciones">
+                <button type="submit" class="btn btn-default">Submit</button>
+            </nav>
+        </form>
+    </div>
+    <div class="panel-heading">
+        <h4>Buscar por tipo:</h4>
+    </div>
+    <div  class="panel-body">
+        <form action="/inmuebles/types" enctype="multipart/form-data" method="POST">
+            <select class="form-control" onchange="this.form.submit()" name="tipo">
+                <option selected disabled>Seleccionar tipo</option>
+                    <%  tipos.forEach(tipo => { %>
+
+                            <option value='<%=tipo._id%>'>
+                                    <%=tipo.tipo%>
+                            </option>
+
+                    <%  }); %>
+            </select>
+        </form>
+    </div>
+</div>

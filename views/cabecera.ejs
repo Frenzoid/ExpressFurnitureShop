@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <link href="/public/css/estilos.css" rel="stylesheet">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+        <title>Inmueblessssss</title>
+    </head>
+    <div class="container">
+        <div id="cabecera">
+            <div id="titulo">
+                <h1><a href="/">Inmuebles el pozisimo.</a></h1>
+            </div>
+            <%- include('filtrar_inmuebles'); %>
+
+            <hr/>
+            <div class="container">
+                <div class="panel panel-default">
+                <div class="panel panel-header">
+                    <h2>Opciones:</h2>
+                </div>
+                  <div class="panel-body">
+                    <a class="btn btn-primary" href="/inmuebles">Listar inmuebles</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-primary" style="color: white;" onclick="access()">Nuevo inmueble</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-dark" href="/usuarios/login">Iniciar Sesion</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-dark" href="/usuarios/registro">Registro</a>&nbsp;&nbsp;&nbsp;
+                    <a class="btn btn-dark" onclick='logout()' style="color: white;">Salir</a>&nbsp;&nbsp;&nbsp;
+                  </div>
+                </div>
+              </div>   
+        </div>        

@@ -1,0 +1,75 @@
+<%- include('cabecera'); %>
+    <h1>Registro</h1>
+
+    <div class="form-horizontal">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group has-danger">
+                    <label class="sr-only" for="username">username</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem">
+                            <i class="fa fa-at"></i>
+                        </div>
+                        <input type="text" placeholder="username" name="username" class="form-control" id="username" required autofocus>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="sr-only" for="password">Password</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label class="sr-only" for="password">Repeat Password</label>
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                        <div class="input-group-addon" style="width: 2.6rem">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <input type="password" name="password2" class="form-control" id="password2" placeholder="Password" required>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="padding-top: 1rem">
+            <div class="col-md-6"></div>
+            <div class="col-md-6">
+                <button  class="btn btn-success" onclick="register()">
+                    <i class="fa fa-sign-in"></i> Register</button>
+            </div>
+        </div>
+        <div class='row'>
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <div class="form-control-feedback">
+                        <span class="text-danger align-middle">
+                            <% 
+                            console.log(error + ' register');
+                            if(error){%> Las contrasenyas no coinciden.
+                                <%}%>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <%- include('pie'); %>

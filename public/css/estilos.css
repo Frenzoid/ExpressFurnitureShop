@@ -1,0 +1,48 @@
+#cabecera
+{
+    margin-bottom: 30px;
+}
+#titulo
+{
+    float:left;
+    width:100%;
+    margin-bottom: 20px;
+}
+#logo
+{
+    float: left;
+    width: 20%;
+}
+#textotitulo
+{
+    float: left;
+    font-size:3em;
+    width: 70%;
+}
+.white{
+    color: white;
+}
+#nuevoOK
+{
+    display: none;
+}
+#nuevoError
+{
+    display: none;
+}
+.gallery_product
+{
+    margin-bottom: 30px;
+}
+
+.image{
+    width: 250px;
+    height: 200px;
+    box-shadow: 0px 0px 1px 1px grey;
+    transition: 0.25s;
+}
+
+.image:hover{
+    box-shadow: 0px 0px 1px 1px black;
+    transition: 0.25s;
+}

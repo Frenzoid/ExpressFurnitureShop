@@ -1,0 +1,41 @@
+<%- include('cabecera'); %>
+    <h1>Listado de inmuebles</h1>
+
+    <% 
+if (inmuebles.length > 0)
+{
+%>
+        <div class="row">
+            <%  inmuebles.forEach(inmueble => { %>
+                <div class="col-3" style="width: 18rem;">
+                    <div class="card">
+                        <img class="card-img-top image" src="/public/imgs/inmuebles/<%=inmueble._id%>/<%=inmueble.imagen%>" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <%=inmueble.descripcion%>
+                            </h5>
+                            <p class="card-text">
+                                <ul>
+                                    <li>Precio:
+                                        <%=inmueble.precio%> eur
+                                    </li>
+                                </ul>
+                            </p>
+                            <a href="/inmuebles/<%=inmueble._id%>" class="btn btn-primary">Ver inmueble</a>
+                            
+                            <a onclick="edit('<%=inmueble._id%>')" class="btn btn-warning">Editar</a>
+                            <button onclick="borrar('<%=inmueble._id%>')"  class="white btn btn-danger"> Eliminar </button>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <%  });%>
+        </div>
+        <%
+
+} else { 
+%>
+            <p>No se han encontrado inmuebles</p>
+            <% } %>
+                <%- include('pie'); %>
